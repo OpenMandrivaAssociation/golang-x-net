@@ -19,8 +19,19 @@ URL:		https://github.com/golang/net
 License:	BSD with advertising
 Group:		Development/Other
 BuildRequires:	compiler(go-compiler)
-BuildRequires:	golang(golang.org/x/crypto)
-BuildRequires:	golang(golang.org/x/text)
+BuildRequires:	golang(golang.org/x/crypto/chacha20)
+BuildRequires:	golang(golang.org/x/crypto/chacha20poly1305)
+BuildRequires:	golang(golang.org/x/crypto/cryptobyte)
+BuildRequires:	golang(golang.org/x/crypto/hkdf)
+BuildRequires:	golang(golang.org/x/sys/unix)
+BuildRequires:	golang(golang.org/x/term)
+BuildRequires:	golang(golang.org/x/text/encoding)
+BuildRequires:	golang(golang.org/x/text/encoding/charmap)
+BuildRequires:	golang(golang.org/x/text/encoding/htmlindex)
+BuildRequires:	golang(golang.org/x/text/secure/bidirule)
+BuildRequires:	golang(golang.org/x/text/transform)
+BuildRequires:	golang(golang.org/x/text/unicode/bidi)
+BuildRequires:	golang(golang.org/x/text/unicode/norm)
 
 %description
 This package provides supplementary Go networking libraries.
