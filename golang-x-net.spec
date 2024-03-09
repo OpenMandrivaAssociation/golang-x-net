@@ -1,7 +1,5 @@
 %global debug_package %{nil}
 
-%bcond_without bootstrap2
-
 # Run tests in check section
 %bcond_without check
 
@@ -12,30 +10,17 @@ Version:		0.22.0
 
 %gometa
 
-%if %{with bootstrap2}
-%global __requires_exclude ^golang\\\(golang\\\.org\\\/x\\\/text.*\\\)$|^golang\\\(golang\\.org\\\/x\\\/crypto.*\\\)$
-%endif
-#\
-#	|^golang\\\(golang.org/x/text.*\\\)$ \
-#	|^golang\\\(golang\\.org\\\/x\\\/crypto.*\\\)$
 Summary:	Go supplementary network libraries
 Name:		golang-x-net
 
-Release:	1
+Release:	2
 Source0:	https://github.com/golang/net/archive/v%{version}/net-%{version}.tar.gz
-%if %{with bootstrap2}
-# Generated from Source100
-Source3:	vendor.tar.zst
-Source100:	golang-package-dependencies.sh
-%endif
 URL:		https://github.com/golang/net
 License:	BSD with advertising
 Group:		Development/Other
 BuildRequires:	compiler(go-compiler)
-%if ! %{with bootstrap2}
 BuildRequires:	compiler(golang.org/x/crypto)
 BuildRequires:	compiler(golang.org/x/text)
-%endif
 
 %description
 This package provides supplementary Go networking libraries.
@@ -62,12 +47,6 @@ building other packages which use import path with
 
 %prep
 %autosetup -p1 -n net-%{version}
-
-rm -rf vendor
-
-%if %{with bootstrap2}
-tar xf %{S:3}
-%endif
 
 %build
 %gobuildroot
