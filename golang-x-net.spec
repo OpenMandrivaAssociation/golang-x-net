@@ -19,8 +19,8 @@ URL:		https://github.com/golang/net
 License:	BSD with advertising
 Group:		Development/Other
 BuildRequires:	compiler(go-compiler)
-BuildRequires:	compiler(golang.org/x/crypto)
-BuildRequires:	compiler(golang.org/x/text)
+BuildRequires:	golang(golang.org/x/crypto)
+BuildRequires:	golang(golang.org/x/text)
 
 %description
 This package provides supplementary Go networking libraries.
