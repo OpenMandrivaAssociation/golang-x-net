@@ -6,14 +6,14 @@
 # https://github.com/golang/net
 %global goipath		golang.org/x//net
 %global forgeurl	https://github.com/golang/net
-Version:		0.22.0
+Version:		0.28.0
 
 %gometa
 
 Summary:	Go supplementary network libraries
 Name:		golang-x-net
 
-Release:	2
+Release:	1
 Source0:	https://github.com/golang/net/archive/v%{version}/net-%{version}.tar.gz
 URL:		https://github.com/golang/net
 License:	BSD with advertising
