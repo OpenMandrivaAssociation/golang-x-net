@@ -6,7 +6,7 @@
 # https://github.com/golang/net
 %global goipath		golang.org/x//net
 %global forgeurl	https://github.com/golang/net
-Version:		0.28.0
+Version:		0.29.0
 
 %gometa
 
