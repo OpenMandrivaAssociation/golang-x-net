@@ -6,7 +6,7 @@
 # https://github.com/golang/net
 %global goipath		golang.org/x//net
 %global forgeurl	https://github.com/golang/net
-Version:		0.32.0
+Version:		0.43.0
 
 %gometa
 
@@ -57,7 +57,7 @@ building other packages which use import path with
 #-----------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n net-%{version}
+%autosetup -p1 -n net-0.43.0
 
 %build
 %gobuildroot
